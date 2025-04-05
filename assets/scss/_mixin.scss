@@ -1,0 +1,38 @@
+@mixin flexBox( $direction : row , $jc : start, $ai : start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+}  
+
+@mixin typography($size : 1.6rem, $weight : 500, $lineHeight : 1.1 ) {
+  font-family: barlow;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+
+@mixin buttonOrder($bgColor, $textColor, $bgHover,  $buttonHover, $buttonFocus) {
+  border: none;
+  border-radius: .8rem;
+  background-color: $bgColor;
+  color: $textColor;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1.45rem 1.4rem;
+
+  &:hover {
+    background-color: $bgHover;
+    color: $buttonHover;
+  }
+
+  &:focus {
+    background-color: $bgHover;
+    color: $buttonHover;
+    border: 1px solid $buttonFocus;
+  }
+}
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="assets/js/main.js"></script> 
+    <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+    <main class="layout"> 
+        <div class="layout__images"> 
+            <picture class="images__media"> 
+                <source srcset="./assets/images/drawers.avif" type="image/avif">
+                <source srcset="./assets/images/drawers.webp" type="image/webp">
+                <img  class="images__drawer" src="./assets/images/drawers.jpg" alt="touches to furniture in your home">
+            </picture>
+        </div>
+        <section class="layout__content"> 
+            <header class="layout__component"> 
+                <h1 class="component__title">
+                      Shift the overall look and feel by adding these wonderful 
+                      touches to furniture in your home
+                </h1>
+
+                <p class="component__lead">
+                      Ever been in a room and felt like something was missing? Perhaps 
+                      it felt slightly bare and uninviting. I’ve got some simple tips 
+                      to help you make any room feel complete.
+                </p>
+            </header>
+            <section class="component__person"> 
+                <section class="person__info"> 
+                    <picture class="person__images"> 
+                        <source srcset="./assets/images/avatar-michelle.avif" type="image/avif">
+                        <source srcset="./assets/images/avatar-michelle.webp" type="image/webp">
+                        <img class="person__images" src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton card pesonal share"> 
+                    </picture>
+                    <section class="person__name"> 
+                        <h2 class="person__title">Michelle Appleton</h2> 
+                        <p class="person__date">28 Jun 2020</p>
+                    </section>
+                </section>
+
+                <nav class="component__share component__share-desktop"> 
+                    <section class="component__social"> 
+                        <!-- <div class="share__social"> -->
+                            <h2 class="social__title">Share</h2>   
+                            <a id="social__net--facebook" class="social__net" href="#" > 
+                                <img class="social__icons" src="./assets/images/icon-facebook.svg" alt="">     
+                            </a>
+                            <a id="social__net--twitter" class="social__net" href="#" > 
+                                <img class="social__icons" src="./assets/images/icon-twitter.svg" alt="">     
+                            </a>
+                            <a id="social__net--pinterest" class="social__net" href="#" > 
+                                <img class="social__icons" src="./assets/images/icon-pinterest.svg" alt="">  
+                            </a>   
+                        <!-- </div>  -->   
+                    </section>    
+                </nav>         
+                <div class="person__shares--light"> 
+                    <button class="shares__buttons-light" type="button">
+    <svg class="buttons__social" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+        <path fill="currentColor" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+    </svg>
+                   </button>
+                </div>
+                    <!-- <button class="shares__buttons-light" type="button"> -->
+                    <!--     <img class="buttons-light__social" src="./assets/images/icon-share.svg" alt=""> -->
+                    <!-- </button> -->
+            </section>
+        </section>
+            <!-- <div class="person__shares--dark"> -->
+            <!--     <button class="shares__buttons-dark" type="button"> -->
+            <!--         <img class="buttons-dark__social" src="./assets/images/icon-share.svg" alt=""> -->
+            <!--     </button> -->
+            <!-- </div> -->
+    </main>
+</body>
+</html>

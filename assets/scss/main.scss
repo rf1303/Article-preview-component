@@ -1,0 +1,255 @@
+@use './reset';
+@use './variables' as *;
+@use './mixin' as *;
+@use'./font-face' as *;
+
+@include fontFace(manrope, '../fonts/Manrope-VariableFont_wght.woff2', 400 800);
+
+
+body {
+  font-size: 1.3rem;
+  font-family: manrope;
+  font-weight: 500;
+  background-color: hsl(210, 46%, 90%); /* $lightGrayishBlue; */
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  /* margin: 1rem; */
+}
+
+.layout {
+  width: min(33rem, 95%);
+  background-color: $white-color;
+  border-radius: 1rem;
+  box-shadow: .5px .5px 7px .5px rgba(19, 29, 38, .8);
+}
+
+.images__drawer {
+  width: 100%;
+  max-height: 20.2rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.layout__content {
+  width: 100%;
+  display: grid;
+}
+
+.layout__component {
+  padding-inline: 3rem;
+}
+
+.component__title {
+  margin-top: 4.8rem;
+  color: $darkGrayishBlue;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.component__lead {
+  color: $desaturatedDarkBlue;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .3px;
+  margin-top: 1.6rem;
+}
+
+.component__person {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+  padding-block: .8rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.component__person--dark {
+  background-color: $darkGrayishBlue; 
+}
+
+.display-flex {
+   display: flex !important;  
+}
+
+.display-none {
+   display: none !important;  
+}
+
+.person__info {
+  display: flex;
+  gap: 1rem;
+  padding: 1.2rem 0 1.2rem 3rem;
+}
+
+.person__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $darkGrayishBlue;
+}
+
+.person__date {
+  color: $desaturatedDarkBlue;
+  font-weight: 500;
+}
+
+.person__images {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.person__shares--light {
+  margin-right: 3rem;
+}
+
+.component__share {
+  display: none; 
+  width: 100%;
+  background-color: $darkGrayishBlue;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  /* transition: opacity 1s ease; */
+}
+
+.component__social {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.social__net {
+  text-decoration: none;
+}
+
+.social__title {
+  color: $lightGrayishBlue;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.shares__buttons-light {
+  width: 100%;
+  height: 100%;
+  background-color: $lightGrayishBlue;
+  border-radius: 50%;
+  padding: 1rem;
+  border: none;
+  align-items: center;
+  box-shadow: .5px .5px 7px .4px rgba(65, 65, 65, .5);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: .5px .5px 7px .4px rgba(65, 65, 65, .5);
+  }
+  &:focus {
+    cursor: pointer;
+    box-shadow: .5px .5px 7px .5px rgba(31, 31, 31, .8);
+  }
+}
+
+.buttons__social {
+  color: $darkGrayishBlue;
+}
+
+.shares__buttons-dark {
+  background-color: $desaturatedDarkBlue; 
+}
+
+.buttons__social--dark  {
+  color: #fff;
+  fill: #fff;
+}
+
+.social__net {
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  box-shadow: .5px .5px 7px .5px rgba(31, 31, 31, .8);
+}
+
+@media (min-width:768px) {
+
+   .layout {
+    width: 73rem;
+    height: 28.2rem;
+    display: grid;
+    grid-template-columns: 28.6rem 44.4rem;
+    justify-content: center;
+    position: relative;
+  } 
+
+  .images__media {
+    width: 100%;
+    height: 100%;
+  }
+
+  .images__drawer {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 1rem 0 0 1rem;
+    object-fit: cover;
+  }
+
+  .layout__content {
+    padding-inline: 3.6rem 5.5rem; 
+  }
+
+  .layout__component {
+    padding: 0; 
+  }
+
+  .component__title {
+    margin-top: 3.6rem;
+    font-size: 2.0rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .component__lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: .8rem;
+    line-height: 1.6;
+  }
+
+  .component__share-desktop {
+    display: none; 
+    width: 24.8rem;
+    height: 5.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: .8rem;
+    position: absolute;
+    left: 73%;
+    bottom: 31%;
+  }  
+
+  .component__share-desktop::after {
+      content: "";
+      position: absolute;
+      bottom: -36%;
+      left: 50%;
+      transform: translateX(-50%); 
+      border-width: 10px;
+      border-style: solid;
+      border-color: #48556a transparent transparent transparent;
+  }
+
+
+  .person__info {
+    padding-left: 0;
+  }
+
+  .person__shares--light {
+    margin-right: 0;
+  }
+}
+
+
